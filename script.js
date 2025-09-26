@@ -10,9 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
       result.innerHTML = `<p>Введите число!</p>`;
       input.value = '';
       form.appendChild(result);
-      return;ds
+      return;
     }
-
+    if (value > 100 || value < 0) {
+      result.innerHTML = `<p>Диапазон чисел от 0 до 100!</p>`;
+      input.value = '';
+      form.appendChild(result);
+      return;
+    }
+  
     if(value==number){
       result.innerHTML=`<p>Вы угадали число</p>`;
       input.value='';
@@ -24,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
       input.value='';
       form.appendChild(result);
 
-    }else{
+    }
+    else{
       input.value='';
       return 1;
 
